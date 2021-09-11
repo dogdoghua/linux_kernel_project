@@ -6,7 +6,7 @@ kernel address space 都會對應到相同的 physical address。
 
 
 environment: ubuntu
-## main idea:
+## main idea
   - 每個 process 都會 map virtual address 0xc0000000 之前的內容到各自的Page Global Directory(PGD)。
     相反的，每個 process 剩下的 entries should be the same to the corresponding entries of the Master Kernel Page Global Directory(MKPGD)
   - 所以只要證明不同 process 的MKPGD內容都一樣就可以了!! (都會指向process0的PGD)

@@ -16,7 +16,7 @@ asmlinkage int sys_get_kernel_space(int first, int last, int* result){
     while(first <= last){
         value = pgd_val( *(pgd+first) );
         result[first] = value;
-        printk("entry %d : %lx \n",first, value);
+        // printk("entry %d : %lx \n",first, value);
         first++;
     }
 }
